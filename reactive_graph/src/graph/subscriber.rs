@@ -56,7 +56,8 @@ impl Observer {
         )
     }
 
-    fn set(observer: Option<AnySubscriber>) {
+    /// Sets the current observer.
+    pub fn set(observer: Option<AnySubscriber>) {
         OBSERVER.with_borrow_mut(|o| {
             *o = observer.map(|subscriber| ObserverState {
                 subscriber,

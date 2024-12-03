@@ -5,6 +5,7 @@
 //! between sources and subscribers usually consists of fairly small numbers, such that the cost of
 //! a linear search is not significantly more expensive than a hash and lookup.
 
+#![allow(missing_docs)]
 use super::{AnySource, AnySubscriber, Source};
 use core::slice;
 use std::{mem, vec::IntoIter};
